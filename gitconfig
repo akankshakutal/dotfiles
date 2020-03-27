@@ -1,0 +1,18 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	a = add
+	p = push
+	d = diff
+[user]
+	name = Akanksha Kutal
+	email = 44019583+akankshakutal@users.noreply.github.com
+[core]
+	editor = vim
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
