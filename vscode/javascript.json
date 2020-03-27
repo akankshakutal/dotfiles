@@ -13,7 +13,7 @@
 	// 	"description": "Log output to console"
     
     "console log": {
-        "prefix": "cl",
+        "prefix": "clog",
         "body": [
             "console.log('$1')",
             "$2"
@@ -22,7 +22,7 @@
     },
 
     "describe block": {
-        "prefix": "db",
+        "prefix": "desc",
         "body": [
             "describe('${1:function_name}', function() {",
             "\tit('should return ${2:statement}', function() {",
@@ -44,7 +44,7 @@
     },
     
     "require a module": {
-        "prefix": "re",
+        "prefix": "require",
         "body": [
             "const ${1:module_name} = require(${2:module_path})",
         ],
@@ -52,7 +52,7 @@
     },
 
     "function": {
-        "prefix": "cf",
+        "prefix": "func",
         "body": [
             "const ${1:function_name} = function(${2:arguments}) {",
                 "${3:code}",
@@ -60,28 +60,13 @@
         ],
     },
 
-    "assert": {
-        "prefix": "as",
-        "body": [
-            "const {deepEqual, equal} = require('assert')",
-        ],
-            "description": "assert"
-    },
-
     "fs": {
         "prefix": "fs",
         "body": "const fs = require('fs')"
     },
 
-    "deepEqual": {
-        "prefix": "de",
-        "body": [
-            "deepEqual(${1:actual},${2:expected})"
-        ],
-    },
-
     "module.exports" : {
-        "prefix": "me",
+        "prefix": "module",
         "body": [
             "module.exports = {",
                 "${1:function_name}",
@@ -90,7 +75,7 @@
     },
 
     "main" : {
-        "prefix": "mn",
+        "prefix": "main",
         "body": [
             "const main = function(){",
             "  ${1:function_body}",
@@ -118,20 +103,6 @@
         "body": [
             "   return function(${1:args}) {",
             "   };"
-        ]
-    },
-
-    "generate-function" : {
-        "prefix": "fg",
-        "body": [
-            "const ${1:function_name} = function(${2:args}) {",
-            "  let ${3: counter_var} = ${4:value}",
-            "  ${5:func_body}",
-            "  return function(${6:args}) {",
-            "    ${7:body}",
-            "    return ${8:value}",
-            "  };",
-            "};"
         ]
     },
 
